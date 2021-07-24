@@ -4,11 +4,17 @@
         "packages/*"
     ],
     "scripts": {
+        "clean": "lerna run clean",
+        "build": "lerna run build",
+        "pub": "lerna publish",
         "test": "lerna run test --since",
         "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff"
     },
     "devDependencies": {
         "lerna": "^4.0.0"
+    },
+    "dependencies": {
+        "typescript": "^4.3.5"
     }
 }
