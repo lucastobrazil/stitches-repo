@@ -1,11 +1,11 @@
 import { createCss } from '@stitches/react';
 
 export const { styled, css, global, keyframes, getCssString, theme } = createCss({
+  prefix: 'maki',
   theme: {
     colors: {
-        primary: '#cc0000',
-      gray400: 'gainsboro',
-      gray500: 'lightgray',
+      primary: 'yellow',
+      background: '#fafafa',
     },
     space: {
         large: '30px'
