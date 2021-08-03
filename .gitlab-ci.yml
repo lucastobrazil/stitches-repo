@@ -39,8 +39,8 @@ build-assets:
       - .yarn/
   script:
     - cd docs
-    - yarn install --frozen-lockfile --check-files --non-interactive --force
-    - yarn build
+    - npm install --frozen-lockfile --check-files --non-interactive --force
+    - npm run build
   artifacts:
     paths:
       - public
