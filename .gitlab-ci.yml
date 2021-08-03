@@ -1,0 +1,61 @@
+#image: "node:lts-alpine"
+image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
+
+.keys_template: &KEYS_TEMPLATE
+  before_script:
+    # setup SSH keys for private repo access
+    - mkdir -p ~/.ssh
+    - touch ~/.ssh/known_hosts
+    - ssh-keyscan -H gitlab.geniesolutions.com.au >> ~/.ssh/known_hosts
+    - eval $(ssh-agent -s) && ssh-add <(echo "${SSH_PRIVATE_KEY}")
+    - git remote set-url origin git@gitlab.geniesolutions.com.au:lucasarundell/motif-website.git
+  after_script:
+    # kill the ssh-agent process
+    - kill -9 ${SSH_AGENT_PID}
+
+
+stages:
+  - build
+  - deploy
+
+# These folders are cached between builds
+# http://docs.gitlab.com/ce/ci/yaml/README.html#cache
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    # Default cache directory from https://classic.yarnpkg.com/en/docs/install-ci/#gitlab.
+    - docs/node_modules/
+    # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
+    - docs/.cache/
+    - docs/public/
+
+
+build-assets:
+  <<: *KEYS_TEMPLATE
+  stage: build
+  cache:
+    paths:
+      - node_modules/
+      - .yarn/
+  script:
+    - cd docs
+    - yarn install --frozen-lockfile --check-files --non-interactive --force
+    - yarn build
+  artifacts:
+    paths:
+      - public
+
+deploy-dev-s3:
+  image: "python:latest"
+  stage: deploy
+  dependencies: 
+    - build-assets
+  before_script:
+    - pip install awscli
+  tags:
+  - test-platform
+  script:
+    - aws s3 sync public s3://design.dev.geniesolutions.cloud/ --delete
+  environment:
+    name: dev
+    url: http://design.dev.geniesolutions.cloud
