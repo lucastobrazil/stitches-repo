@@ -1,0 +1,13 @@
+import { Button, css } from '@maki-ds/core';
+const customStyles = css({
+    mx: '$large',
+    '&:hover': {
+        transform: 'translateX(20px)'
+    }
+})();
+
+
+# Hello there!
+
+<Button>Radical</Button>
+<Button className={customStyles}>Radical</Button>
