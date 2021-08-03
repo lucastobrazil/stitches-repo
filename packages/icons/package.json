@@ -1,6 +1,6 @@
 {
   "name": "@maki-ds/icons",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -14,7 +14,7 @@
     "test": "echo 📣 test icons"
   },
   "dependencies": {
-    "@maki-ds/core": "^0.0.3"
+    "@maki-ds/core": "^0.0.4"
   },
   "devDependencies": {
     "rimraf": "~3.0.2",
