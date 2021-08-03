@@ -1,3 +1,10 @@
-const meaningOfLife = 42;
+import { styled } from './stitches.config';
 
-export default meaningOfLife;
+const Button = styled('button', {
+    backgroundColor: '$primary',
+    padding: '$large'
+});
+
+const meaningOfLife = 22;
+
+export { Button, meaningOfLife }
