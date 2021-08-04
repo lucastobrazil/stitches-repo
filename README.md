@@ -5,7 +5,7 @@
 3. Typescript support
 
 
-## Packages
+# Packages
 
 ## @maki-ds/core
 - Basic Typescript package
@@ -21,10 +21,11 @@
 - Shows TS support (intellisense shows the type)
 
 
-# docs
+# Docs
 - Gatsby Website
 - Consumes/dogfoods the `@maki-ds/core` lib
 - HMR works when you rebuild the lib
+- Deployed via CI to http://design.dev.geniesolutions.cloud/
 
 ## To use:
 - `cd docs && npm run develop`
