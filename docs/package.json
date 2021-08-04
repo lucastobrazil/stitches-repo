@@ -11,6 +11,7 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
+    "publish": "npm run clean && npm run build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
