@@ -1,4 +1,10 @@
-import { styled, css, global, darkTheme } from "./stitches.config";
+import {
+  styled,
+  css,
+  global,
+  darkTheme,
+  getCssString,
+} from "./stitches.config";
 
 // Basic Components
 const Box = styled("div", {});
@@ -46,4 +52,5 @@ export {
   css,
   global,
   darkTheme,
+  getCssString,
 };
