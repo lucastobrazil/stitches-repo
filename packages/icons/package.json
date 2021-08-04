@@ -1,5 +1,6 @@
 {
   "name": "@maki-ds/icons",
+  "private": false,
   "version": "0.0.8",
   "main": "dist/index",
   "types": "dist/index",
