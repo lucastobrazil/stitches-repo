@@ -55,7 +55,7 @@ deploy-dev-s3:
   tags:
   - test-platform
   script:
-    - aws s3 sync public s3://design.dev.geniesolutions.cloud/ --delete
+    - aws s3 sync docs/public s3://design.dev.geniesolutions.cloud/ --delete
   environment:
     name: dev
     url: http://design.dev.geniesolutions.cloud
