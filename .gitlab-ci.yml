@@ -39,7 +39,7 @@ build-assets:
   script:
     - cd docs
     - npm ci
-    - npm run publish
+    - npm run build
   artifacts:
     paths:
       - docs/public
