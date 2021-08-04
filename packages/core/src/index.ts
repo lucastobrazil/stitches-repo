@@ -4,7 +4,7 @@ import { styled, css, global } from './stitches.config';
 const Button = styled('button', {
     backgroundColor: '$primary',
     padding: '$large',
-    borderRadius: 9999,
+    borderRadius: 99999,
     '&:hover': {
         backgroundColor: 'lightgray',
     },
