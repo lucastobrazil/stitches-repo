@@ -1,4 +1,5 @@
 import { Button, css } from '@maki-ds/core';
+import { Link } from "gatsby"
 const customStyles = css({
     mx: '$large',
     '&:hover': {
@@ -8,6 +9,6 @@ const customStyles = css({
 
 
 # Hello there!
-
+<Link to="/">Home</Link>
 <Button>Radical</Button>
 <Button className={customStyles}>Radical</Button>
