@@ -1,5 +1,6 @@
 import { styled, css, global } from './stitches.config';
 
+// Basic Component
 const Button = styled('button', {
     backgroundColor: '$primary',
     padding: '$large',
@@ -9,10 +10,19 @@ const Button = styled('button', {
     },
 });
 
+// Another Component
 const Wrapper = styled('main', {
     backgroundColor: '$background'
 });
 
-const meaningOfLife = 22;
+// Example basic var consumed by icons
+const exportedTestVar: number = 22;
 
-export { Button, meaningOfLife, css, global, Wrapper }
+export { 
+    Button, 
+    Wrapper,
+    exportedTestVar, 
+    // Stitches functions, to be exposed for consumption
+    css, 
+    global, 
+};

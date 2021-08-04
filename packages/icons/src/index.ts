@@ -1,3 +1,3 @@
-import { meaningOfLife } from '@maki-ds/core';
+import { exportedTestVar } from '@maki-ds/core';
 
-console.log(meaningOfLife);
+console.log(exportedTestVar);

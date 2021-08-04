@@ -15,6 +15,7 @@ export const { styled, css, global, keyframes, getCssString, theme } = createCss
     bp1: '(min-width: 480px)',
   },
   utils: {
+    // Example util that we could set
     marginX: (config) => (value) => ({ marginLeft: value, marginRight: value }),
   },
 });

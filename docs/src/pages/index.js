@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby";
-import { Button, css, global, darkTheme, Wrapper } from "@maki-ds/core";
+import { Button, Wrapper, css, global } from "@maki-ds/core";
 
 /* Testing Adding Global Styles to the document */
 const globalStyles = global({
@@ -20,11 +20,11 @@ const stitchesStyle = css({
 const IndexPage = () => {
   globalStyles();
   return (
-    <Wrapper className={ darkTheme }>
+    <Wrapper>
       <title>Home Page</title>
-      <Button>Stitches Button</Button>
       <h1>Yay Stitches stuff is here!</h1>
-      <Link to="/test">MDX Page</Link>
+      <Button>Stitches Button</Button>
+      <Button as={Link} to="/test">Link to MDX Page</Button>
       <div className={stitchesStyle()}>Fancy Div</div>
     </Wrapper>
   )
