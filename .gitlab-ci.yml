@@ -40,7 +40,7 @@ build-assets:
   script:
     - cd docs
     - npm install --frozen-lockfile --check-files --non-interactive --force
-    - npm run build
+    - npm run publish
   artifacts:
     paths:
       - docs/public
