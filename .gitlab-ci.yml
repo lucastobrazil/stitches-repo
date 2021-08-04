@@ -36,10 +36,9 @@ build-assets:
   cache:
     paths:
       - docs/node_modules/
-      - docs/.yarn/
   script:
     - cd docs
-    - npm install --frozen-lockfile --check-files --non-interactive --force
+    - npm ci
     - npm run publish
   artifacts:
     paths:
