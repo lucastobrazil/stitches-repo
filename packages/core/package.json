@@ -14,7 +14,7 @@
         "prepublishOnly": "npm run build",
         "test": "echo 📣 core"
     },
-    "peerDependencies": {
+    "dependencies": {
         "@stitches/react": "^0.2.3"
     },
     "devDependencies": {
