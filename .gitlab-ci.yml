@@ -35,8 +35,8 @@ build-assets:
   stage: build
   cache:
     paths:
-      - node_modules/
-      - .yarn/
+      - docs/node_modules/
+      - docs/.yarn/
   script:
     - cd docs
     - npm install --frozen-lockfile --check-files --non-interactive --force
