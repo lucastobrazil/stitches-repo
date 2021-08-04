@@ -38,7 +38,7 @@ build-assets:
       - docs/node_modules/
   script:
     - cd docs
-    - npm ci
+    - npm install
     - npm run build
   artifacts:
     paths:
