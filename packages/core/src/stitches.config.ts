@@ -9,7 +9,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         default: "-apple-system, BlinkMacSystemFont, sans-serif, serif",
       },
       colors: {
-        primary: "yellow",
+        primary: "orange",
         background: "rgba(244,244,244)",
         text: "rgba(0,0,0,0.87)",
       },

@@ -1,4 +1,5 @@
 {
+    "private": true,
     "workspaces": [
         "packages/*"
     ],
@@ -7,7 +8,6 @@
         "build": "lerna run build",
         "pub": "lerna publish",
         "test": "lerna run test --since",
-        "new-version": "lerna version --conventional-commits --yes",
         "diff": "lerna diff"
     },
     "devDependencies": {
