@@ -1,7 +1,7 @@
 {
   "name": "@maki-ds/icons",
   "private": false,
-  "version": "0.0.14",
+  "version": "0.0.15",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -15,6 +15,6 @@
     "test": "echo 📣 test icons"
   },
   "dependencies": {
-    "@maki-ds/core": "^0.0.14"
+    "@maki-ds/core": "^0.0.15"
   }
 }
