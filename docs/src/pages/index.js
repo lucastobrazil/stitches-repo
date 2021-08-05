@@ -102,7 +102,8 @@ const IndexPage = () => {
       >
         Stitches Gray Variant
       </Button>
-      <Button color="violet">Stitches Violet Variant</Button>
+      <Button size="small">Small</Button>
+      <Button color="outline">Stitches Outline Variant</Button>
       <Button as={Link} to="/test">
         Link to MDX Page
       </Button>

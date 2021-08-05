@@ -1,4 +1,10 @@
 import { createCss } from "@stitches/react";
+import { ThemeColors } from '@genie-solutions/motif-tokens';
+
+
+const createRgbaString = ({ r, g, b, a }) =>
+  `rgba(${r}, ${g}, ${b}, ${a})`;
+
 
 export const { styled, css, global, keyframes, getCssString, theme } =
   createCss({
@@ -9,7 +15,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         default: "-apple-system, BlinkMacSystemFont, sans-serif, serif",
       },
       colors: {
-        primary: "orange",
+        primary: createRgbaString(ThemeColors.primary.data.value),
         background: "rgba(244,244,244)",
         text: "rgba(0,0,0,0.87)",
       },

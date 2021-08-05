@@ -14,18 +14,27 @@ const Typography = styled("span", {
 
 const Button = styled("button", {
   backgroundColor: "$primary",
-  padding: "$lg",
+  padding: "$sm $lg",
+  fontFamily: "$default",
   borderRadius: 4,
+  fontWeight: 500,
+  border: "1px solid transparent",
   // Pseudo Selectors
   "&:hover": {
     backgroundColor: "lightgray",
   },
   // Variants API
   variants: {
+    size: {
+      small: {
+        padding: 2,
+      }
+    },
     color: {
-      violet: {
-        backgroundColor: "blueviolet",
-        color: "white",
+      outline: {
+        backgroundColor: "transparent",
+        borderColor: "$primary",
+        color: "$primary",
       },
       gray: {
         backgroundColor: "gainsboro",

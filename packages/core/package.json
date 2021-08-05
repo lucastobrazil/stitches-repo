@@ -15,6 +15,7 @@
         "test": "echo 📣 core"
     },
     "dependencies": {
+        "@genie-solutions/motif-tokens": "^2.1.1",
         "@stitches/react": "^0.2.3",
         "react": "^17.0.0"
     },
