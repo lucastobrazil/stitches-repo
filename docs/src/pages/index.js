@@ -11,7 +11,7 @@ const globalStyles = global({
   "*": { margin: 0, padding: 0 },
   body: {
     fontFamily: "$default",
-    background: '$background',
+    background: "$background",
   },
 });
 
@@ -79,21 +79,29 @@ const IndexPage = () => {
         Below Components use the polymorphic "as" prop,
         and show off the variants API
       */}
-      <Typography as="h1" css={{
-        color: '$text',
-        '@bp2': {
-            color: 'green'
-        },
-        fontSize: {
-          '@bp1': '$lg',
-          '@bp2': '$md',
+      <Typography
+        as="h1"
+        css={{
+          color: "$text",
+          "@bp2": {
+            color: "green",
+            fontSize: 12,
+          },
+        }}
+      >
+        Maki-DS PoC 🧨
+      </Typography>
 
-        }
-      }}>Maki-DS PoC 🧨</Typography>
-      
       {/* Variants in Action */}
       <Button>Stitches Button</Button>
-      <Button color="gray">Stitches Gray Variant</Button>
+      <Button
+        color="gray"
+        css={{
+          backgroundColor: "red",
+        }}
+      >
+        Stitches Gray Variant
+      </Button>
       <Button color="violet">Stitches Violet Variant</Button>
       <Button as={Link} to="/test">
         Link to MDX Page
