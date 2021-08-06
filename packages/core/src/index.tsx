@@ -13,7 +13,7 @@ const StyledContent = styled(ContextMenu.Content, {
   minWidth: 130,
   backgroundColor: "$background",
   borderRadius: 6,
-  padding: 5,
+  padding: 8,
   boxShadow: "0px 5px 15px -5px hsla(206,22%,7%,.15)"
 });
 const StyledItem = styled(ContextMenu.Item, {
