@@ -1,3 +1,3 @@
-// import { exportedTestVar } from '@maki-ds/core';
-const exportedTestVar = 24;
+import { exportedTestVar } from '@maki-ds/core';
+
 console.log(exportedTestVar);

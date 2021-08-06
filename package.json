@@ -6,11 +6,11 @@
         "docs"
     ],
     "scripts": {
-        "clean": "lerna run clean",
-        "build": "lerna run build",
-        "pub": "lerna publish",
-        "test": "lerna run test --since",
-        "diff": "lerna diff"
+        "clean": "npx lerna run clean",
+        "build": "npx lerna run build",
+        "pub": "npx lerna publish",
+        "test": "npx lerna run test --since",
+        "diff": "npx lerna diff"
     },
     "devDependencies": {
         "lerna": "^4.0.0",
