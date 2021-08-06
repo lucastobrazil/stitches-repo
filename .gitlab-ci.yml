@@ -17,6 +17,7 @@ image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
 stages:
   - build
   - deploy
+  - setup
 
 # These folders are cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -28,6 +29,14 @@ cache:
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - docs/.cache/
     - docs/public/
+
+setup:
+  stage: setup
+  script:
+    - npx lerna bootstrap
+  artifacts:
+    paths:
+      - node_modules/
 
 
 build-assets:
