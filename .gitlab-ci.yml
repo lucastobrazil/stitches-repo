@@ -34,7 +34,7 @@ cache:
 setup:
   stage: setup
   script:
-    - npx lerna bootstrap
+    - npx lerna bootstrap --ci
   artifacts:
     paths:
       - node_modules/
