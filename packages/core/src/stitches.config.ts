@@ -1,7 +1,6 @@
 import { createCss } from "@stitches/react";
 import { ThemeColors } from '@genie-solutions/motif-tokens';
 
-
 const createRgbaString = ({ r, g, b, a }) =>
   `rgba(${r}, ${g}, ${b}, ${a})`;
 
