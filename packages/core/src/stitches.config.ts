@@ -14,7 +14,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
         default: "-apple-system, BlinkMacSystemFont, sans-serif, serif",
       },
       colors: {
-        primary: createRgbaString(ThemeColors.primary.data.value),
+        primary: createRgbaString(ThemeColors.error.data.value),
         background: "rgba(244,244,244)",
         text: "rgba(0,0,0,0.87)",
       },
