@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Button, Box, Typography, css, global, darkTheme } from "@maki-ds/core";
+import { Button, Box, Typography, css, global, darkTheme, Context } from "@maki-ds/core";
 
 /* 
   STITCHES
@@ -50,6 +50,10 @@ const IndexPage = () => {
 
   // Basic State handling for dark mode
   const [isDark, setIsDark] = React.useState(false);
+  const toggleDark = () => {
+    isDark ? document.body.classList.remove(darkTheme) : document.body.classList.add(darkTheme);
+    setIsDark(!isDark);
+  }
   return (
     <Box
       as="main"
@@ -57,7 +61,7 @@ const IndexPage = () => {
         border: "1px solid $primary",
         borderRadius: "$lg",
         backgroundColor: "$background",
-        padding: "$lg",
+        padding: "$2",
         display: "grid",
         gap: "$lg",
       }}
@@ -66,11 +70,11 @@ const IndexPage = () => {
       The below basically just adds a className that contains CSS var 
       overrides from the theme. All Children will be overriden
     */
-      className={isDark && darkTheme}
+      // className={isDark && darkTheme}
     >
       <DarkModeToggle
         isDark={isDark}
-        onChange={setIsDark}
+        onChange={toggleDark}
         css={{ justifySelf: "flex-end" }}
       />
       <title>Maki DS</title>
@@ -91,13 +95,14 @@ const IndexPage = () => {
       >
         Maki-DS PoC 🧨
       </Typography>
-
+      <Context className={isDark && darkTheme} />
       {/* Variants in Action */}
       <Button>Stitches Button</Button>
       <Button
         color="gray"
         css={{
           backgroundColor: "red",
+          marginBottom: "$7"
         }}
       >
         Stitches Gray Variant

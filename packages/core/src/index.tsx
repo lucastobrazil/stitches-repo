@@ -5,6 +5,42 @@ import {
   darkTheme,
   getCssString,
 } from "./stitches.config";
+import React from 'react';
+import * as ContextMenu from "@radix-ui/react-context-menu";
+
+
+const StyledContent = styled(ContextMenu.Content, {
+  minWidth: 130,
+  backgroundColor: "$background",
+  borderRadius: 6,
+  padding: 5,
+  boxShadow: "0px 5px 15px -5px hsla(206,22%,7%,.15)"
+});
+const StyledItem = styled(ContextMenu.Item, {
+  fontSize: 13,
+  padding: "5px 10px",
+  borderRadius: 3,
+  cursor: "default",
+  color: '$text',
+  "&:focus": {
+    outline: "none",
+    backgroundColor: "$primary",
+    color: "$background"
+  }
+});
+const Context = (props) => (
+  <ContextMenu.Root {...props}>
+    <ContextMenu.Trigger as={Box}>
+        <Typography>Check it</Typography>
+    </ContextMenu.Trigger>
+    <StyledContent>
+      <StyledItem onSelect={() => console.log("cut")}>Cut</StyledItem>
+      <StyledItem onSelect={() => console.log("copy")}>Copy</StyledItem>
+      <StyledItem onSelect={() => console.log("paste")}>Paste</StyledItem>
+    </StyledContent>
+  </ContextMenu.Root>
+);
+
 
 // Basic Components
 const Box = styled("div", {});
@@ -62,4 +98,5 @@ export {
   global,
   darkTheme,
   getCssString,
+  Context
 };
