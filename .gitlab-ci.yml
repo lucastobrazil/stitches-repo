@@ -15,9 +15,10 @@ image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
 
 
 stages:
+  - setup
   - build
   - deploy
-  - setup
+
 
 # These folders are cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
