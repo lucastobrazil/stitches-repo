@@ -1,6 +1,6 @@
 {
   "name": "docs",
-  "version": "1.0.0",
+  "version": "0.0.18",
   "private": true,
   "description": "Maki Design System",
   "author": "lucasarundell",
@@ -16,7 +16,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@maki-ds/core": "^0.0.17",
+    "@maki-ds/core": "^0.0.18",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "gatsby": "^3.10.2",
