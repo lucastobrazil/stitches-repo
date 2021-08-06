@@ -15,10 +15,8 @@ image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
 
 
 stages:
-  - setup
   - build
   - deploy
-
 
 # These folders are cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -26,27 +24,20 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     # Default cache directory from https://classic.yarnpkg.com/en/docs/install-ci/#gitlab.
-    - node_modules/
+    - docs/node_modules/
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - docs/.cache/
     - docs/public/
-
-setup:
-  stage: setup
-  script:
-    - npx lerna bootstrap --ci
-  artifacts:
-    paths:
-      - node_modules/
-
 
 build-assets:
   <<: *KEYS_TEMPLATE
   stage: build
   cache:
     paths:
-      - node_modules
+      - docs/node_modules/
   script:
+    - cd docs
+    - npm install
     - npm run build
   artifacts:
     paths:
