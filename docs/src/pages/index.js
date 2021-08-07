@@ -77,7 +77,7 @@ const IndexPage = () => {
         onChange={toggleDark}
         css={{ justifySelf: "flex-end" }}
       />
-      <title>Maki DS</title>
+      <title>Maki DS!</title>
       {/*
         STITCHES
         Below Components use the polymorphic "as" prop,
