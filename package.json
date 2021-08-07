@@ -15,7 +15,7 @@
         "prerelease": "npm run build && npm run test",
         "release": "lerna publish --force-publish",
         "release:canary": "npm run prerelease && lerna publish prerelease --force-publish",
-        "postinstall": "lerna bootstrap --use-workspaces",
+        "postinstall": "lerna bootstrap --use-workspaces"
     },
     "devDependencies": {
         "lerna": "^4.0.0",
