@@ -8,18 +8,18 @@
     "scripts": {
         "clean": "npx lerna run clean",
         "build": "npx lerna run build",
-        "pub": "npx lerna publish",
         "test": "npx lerna run test --since",
-        "diff": "npx lerna diff"
+        "diff": "npx lerna diff",
+        "bootstrap": "lerna bootstrap --use-workspaces",
+        "build:watch": "node .task/build.js --watch",
+        "prerelease": "npm run build && npm run test",
+        "release": "lerna publish --force-publish",
+        "release:canary": "npm run prerelease && lerna publish prerelease --force-publish",
+        "postinstall": "lerna bootstrap --use-workspaces",
     },
     "devDependencies": {
         "lerna": "^4.0.0",
         "rimraf": "^3.0.2",
         "typescript": "~4.3.5"
-    },
-    "dependencies": {
-        "@maki-ds/core": "file:packages/core",
-        "@maki-ds/icons": "file:packages/icons",
-        "docs": "file:docs"
     }
 }
