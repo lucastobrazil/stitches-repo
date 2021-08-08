@@ -12,10 +12,9 @@
         "test": "npx lerna run test --since",
         "diff": "npx lerna diff",
         "bootstrap": "npx lerna bootstrap",
-        "build:watch": "node .task/build.js --watch",
         "prerelease": "npm run build && npm run test",
         "release": "npx lerna publish",
-        "release:canary": "npm run prerelease && lerna publish prerelease --force-publish",
+        "release:canary": "npm run prerelease && lerna publish prerelease",
         "postinstall": "npx lerna bootstrap"
     },
     "devDependencies": {
