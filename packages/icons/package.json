@@ -13,5 +13,9 @@
     "compile": "tsc -p tsconfig.build.json",
     "prepublishOnly": "npm run build",
     "test": "echo 📣 test icons"
+  },
+  "dependencies": {
+    "@genie-solutions/motif-tokens": "^2.1.1",
+    "@maki-ds/core": "^0.0.20"
   }
 }

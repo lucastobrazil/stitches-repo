@@ -4,7 +4,6 @@
     "docs"
   ],
   "version": "0.0.20",
-  "useWorkspaces": true,
   "publishConfig": {
     "access": "public"
   }
