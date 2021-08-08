@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { Button, Box, Typography, css, global, darkTheme, Context } from "@maki-ds/core";
-
+var corePackageJson = require('../../../packages/core/package.json');
 /* 
   STITCHES
   Testing Adding Global Styles to the document 
@@ -93,7 +93,7 @@ const IndexPage = () => {
           },
         }}
       >
-        Maki-DS PoC 🧨
+        Maki-DS PoC  (v{corePackageJson.version}) 🧨
       </Typography>
       <Context className={isDark && darkTheme} />
       {/* Variants in Action */}
