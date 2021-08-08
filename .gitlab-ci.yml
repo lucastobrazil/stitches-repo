@@ -24,7 +24,7 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
   paths:
     # Default cache directory from https://classic.yarnpkg.com/en/docs/install-ci/#gitlab.
-    - node_modules/
+    # - node_modules/
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - .cache/
     - docs/public/
@@ -34,7 +34,7 @@ build-assets:
   stage: build
   cache:
     paths:
-      - docs/node_modules/
+      # - docs/node_modules/
   script:
     - npm install
     - npm run build
