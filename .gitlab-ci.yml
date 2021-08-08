@@ -28,7 +28,7 @@ cache:
     # - node_modules/
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - .cache/
-    - docs/public/
+    - public/
 
 build-assets:
   <<: *KEYS_TEMPLATE
@@ -64,6 +64,6 @@ publish-packages:
   stage: publish
   cache:
     paths:
-      # - docs/node_modules/
+      - node_modules/
   script:
     - npm run release
