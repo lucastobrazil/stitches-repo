@@ -8,6 +8,7 @@
     "scripts": {
         "clean": "npx lerna run clean",
         "build": "npx lerna run build",
+        "develop": "npx lerna run develop --parallel",
         "test": "npx lerna run test --since",
         "diff": "npx lerna diff",
         "bootstrap": "npx lerna bootstrap",
