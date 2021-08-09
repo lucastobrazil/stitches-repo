@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { Button, Box, Typography, css, global, darkTheme, Context } from "@maki-ds/core";
-import { boxStyles }  from './style';
+import { boxStyles }  from '../components/style';
 /* 
   STITCHES
   Testing Adding Global Styles to the document 
