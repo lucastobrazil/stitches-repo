@@ -1,6 +1,6 @@
 {
     "name": "@maki-ds/core",
-    "version": "0.0.24",
+    "version": "0.0.25",
     "main": "dist/index",
     "types": "dist/index",
     "files": [
