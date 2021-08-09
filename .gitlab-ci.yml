@@ -60,6 +60,7 @@ deploy-dev-s3:
     url: http://design.dev.geniesolutions.cloud
 
 publish-packages:
+  image: node14:latest
   <<: *KEYS_TEMPLATE
   stage: publish
   cache:
