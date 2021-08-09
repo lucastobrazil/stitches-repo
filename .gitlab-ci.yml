@@ -66,6 +66,7 @@ publish-packages:
     paths:
       - node_modules/
   script:
+    - apt-get install git
     - npm install
     - npm run bootstrap
     - npm run release
