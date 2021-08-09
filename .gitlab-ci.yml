@@ -1,5 +1,6 @@
 #image: "node:lts-alpine"
-image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
+# image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
+image: node:fermium-buster-slim
 
 .keys_template: &KEYS_TEMPLATE
   before_script:
@@ -60,7 +61,6 @@ deploy-dev-s3:
     url: http://design.dev.geniesolutions.cloud
 
 publish-packages:
-  image: node:fermium-buster-slim
   stage: publish
   cache:
     paths:
