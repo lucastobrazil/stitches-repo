@@ -61,7 +61,6 @@ deploy-dev-s3:
 
 publish-packages:
   image: node:fermium-buster-slim
-  <<: *KEYS_TEMPLATE
   stage: publish
   cache:
     paths:
