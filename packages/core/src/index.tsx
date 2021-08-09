@@ -55,6 +55,7 @@ const Button = styled("button", {
   borderRadius: 4,
   fontWeight: 500,
   border: "1px solid transparent",
+  color: "white",
   // Pseudo Selectors
   "&:hover": {
     backgroundColor: "lightgray",
