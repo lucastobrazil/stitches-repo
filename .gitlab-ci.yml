@@ -61,6 +61,7 @@ deploy-dev-s3:
     url: http://design.dev.geniesolutions.cloud
 
 publish-packages:
+  image: node:fermium-buster-slim
   stage: publish
   cache:
     paths:
