@@ -67,6 +67,7 @@ publish-packages:
     paths:
       - node_modules/
   script:
+    - apt-get update
     - apt-get -y install git=2.32.0
     - npm install
     - npm run bootstrap
