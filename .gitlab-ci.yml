@@ -60,14 +60,14 @@ deploy-dev-s3:
     url: http://design.dev.geniesolutions.cloud
 
 publish-packages:
-  image: node14:latest
+  image: node:fermium-buster-slim
   <<: *KEYS_TEMPLATE
   stage: publish
   cache:
     paths:
       - node_modules/
   script:
-    - apt-get install git
+    - apt-get -y install git=2.32.0
     - npm install
     - npm run bootstrap
     - npm run release
