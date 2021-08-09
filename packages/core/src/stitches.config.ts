@@ -1,11 +1,11 @@
-import { createCss } from "@stitches/react";
+import { createCss, StitchesCss } from "@stitches/react";
 import { ThemeColors } from '@genie-solutions/motif-tokens';
 
 const createRgbaString = ({ r, g, b, a }) =>
   `rgba(${r}, ${g}, ${b}, ${a})`;
 
 
-export const { styled, css, global, keyframes, getCssString, theme } =
+export const config =
   createCss({
     // To scope all CSS Vars eg. `--maki-foo`
     prefix: "maki",
@@ -15,6 +15,7 @@ export const { styled, css, global, keyframes, getCssString, theme } =
       },
       colors: {
         primary: createRgbaString(ThemeColors.primary.data.value),
+        accent: createRgbaString(ThemeColors.accent.data.value),
         background: "rgba(244,244,244)",
         text: "rgba(0,0,0,0.87)",
       },
@@ -45,6 +46,10 @@ export const { styled, css, global, keyframes, getCssString, theme } =
       }),
     },
   });
+
+export const  { styled, css, global, keyframes, getCssString, theme } = config;
+
+export type CSSType = StitchesCss<typeof config>;
 
 export const darkTheme = theme({
   colors: {

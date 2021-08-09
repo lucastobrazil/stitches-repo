@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import { Button, Box, Typography, css, global, darkTheme, Context } from "@maki-ds/core";
+import { boxStyles }  from './style';
 /* 
   STITCHES
   Testing Adding Global Styles to the document 
@@ -23,7 +24,11 @@ const globalStyles = global({
 */
 const customStitchesCSS = css({
   backgroundColor: "$text",
+  borderColor: '$primary',
   color: "$background",
+  '&:hover': {
+    color: '$background'
+  },
   border: "1px solid $primary",
   padding: "$lg",
 });
@@ -56,14 +61,7 @@ const IndexPage = () => {
   return (
     <Box
       as="main"
-      css={{
-        border: "1px solid $primary",
-        borderRadius: "$lg",
-        backgroundColor: "$background",
-        padding: "$2",
-        display: "grid",
-        gap: "$lg",
-      }}
+      css={boxStyles}
       /*
       STITCHES - Dark Mode.
       The below basically just adds a className that contains CSS var 

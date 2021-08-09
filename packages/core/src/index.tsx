@@ -4,6 +4,7 @@ import {
   global,
   darkTheme,
   getCssString,
+  CSSType,
 } from "./stitches.config";
 import React from 'react';
 import * as ContextMenu from "@radix-ui/react-context-menu";
@@ -99,5 +100,6 @@ export {
   global,
   darkTheme,
   getCssString,
-  Context
+  Context,
+  CSSType
 };
