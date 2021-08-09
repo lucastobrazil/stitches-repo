@@ -68,7 +68,7 @@ publish-packages:
       - node_modules/
   script:
     - apt-get update
-    - apt-get -y install git=2.32.0
+    - apt-get -y install git
     - npm install
     - npm run bootstrap
     - npm run release
