@@ -1,7 +1,7 @@
 {
   "name": "@maki-ds/icons",
   "private": false,
-  "version": "0.0.23",
+  "version": "0.0.21",
   "main": "dist/index",
   "types": "dist/index",
   "files": [
@@ -16,6 +16,6 @@
   },
   "dependencies": {
     "@genie-solutions/motif-tokens": "^2.1.1",
-    "@maki-ds/core": "^0.0.20"
+    "@maki-ds/core": "^0.0.21"
   }
 }
