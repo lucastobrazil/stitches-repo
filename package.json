@@ -13,7 +13,7 @@
         "diff": "npx lerna diff",
         "bootstrap": "npx lerna bootstrap",
         "prerelease": "npm run build && npm run test",
-        "release": "npx lerna publish",
+        "release": "npx lerna publish -y",
         "release:canary": "npm run prerelease && lerna publish prerelease",
         "postinstall": "npx lerna bootstrap"
     },
