@@ -9,7 +9,7 @@ image: ${CI_REGISTRY}/itops/infrastructure/build_ruby:latest
     - touch ~/.ssh/known_hosts
     - ssh-keyscan -H gitlab.geniesolutions.com.au >> ~/.ssh/known_hosts
     - eval $(ssh-agent -s) && ssh-add <(echo "${SSH_PRIVATE_KEY}")
-    - git remote set-url origin git@gitlab.geniesolutions.com.au:lucasarundell/motif-website.git
+    - git remote set-url origin git@gitlab.geniesolutions.com.au:lucasarundell/maki-ds.git
   after_script:
     # kill the ssh-agent process
     - kill -9 ${SSH_AGENT_PID}
