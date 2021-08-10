@@ -87,7 +87,7 @@ const Wrapper = styled("main", {
 });
 
 // Example basic var consumed by icons
-const exportedTestVar: string = "22";
+const exportedTestVar: number = 22;
 
 export {
   Button,
