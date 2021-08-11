@@ -2,6 +2,7 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
 const pkg = require('./package.json');
+const escapeRegExp = require('lodash.escaperegexp');
 
 const externals = Object.keys(pkg.dependencies);
 
@@ -12,7 +13,7 @@ module.exports = (env, argv) => ({
   entry: {
     index: "./src/index.ts", 
   },
-  externals: ['react', 'react-dom'],
+  externals: new RegExp(`^(${externals.map(name => escapeRegExp(name)).join('|')})\\b`, 'i'),
   module: {
     rules: [
       // Converts TypeScript code to JavaScript
