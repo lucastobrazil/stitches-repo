@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Button, Box, Typography, css, global, darkTheme, Context } from "@maki-ds/core";
+import { Button, Box, Typography, css, global, darkTheme, ContextMenu } from "@maki-ds/core";
 import { boxStyles }  from '../components/style';
 /* 
   STITCHES
@@ -92,7 +92,7 @@ const IndexPage = () => {
       >
         Maki-DS PoC 🧨
       </Typography>
-      <Context className={isDark && darkTheme} />
+      <ContextMenu className={isDark && darkTheme} />
       {/* Variants in Action */}
       <Button>Stitches Button</Button>
       <Button
@@ -106,10 +106,10 @@ const IndexPage = () => {
       </Button>
       <Button size="small">Small</Button>
       <Button color="outline">Stitches Outline Variant</Button>
-      <Button as={Link} to="/test">
+      <Typography as={Link} to="/test">
         Link to MDX Page
-      </Button>
-      <div className={customStitchesCSS()}>Fancy Div</div>
+      </Typography>
+      <div className={customStitchesCSS()}>Fancy standard Div with stitches styles applied</div>
     </Box>
   );
 };

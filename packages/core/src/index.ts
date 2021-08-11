@@ -1,4 +1,12 @@
-import {
+export { default as Box } from "./Box";
+export { default as Button } from "./Button";
+export { default as ContextMenu } from "./ContextMenu";
+export { default as Typography } from "./Typography";
+
+// Example basic var consumed by icons
+export const exportedTestVar: string = "22";
+
+export {
   styled,
   css,
   global,
@@ -6,26 +14,3 @@ import {
   getCssString,
   CSSType,
 } from "./stitches.config";
-import {Context,   Button,
-  Wrapper,
-  Box,
-  Typography} from './components';
-
-
-// Example basic var consumed by icons
-const exportedTestVar: string = '22';
-
-export {
-  Button,
-  Wrapper,
-  Box,
-  Typography,
-  exportedTestVar,
-  // Stitches functions, to be exposed for consumption
-  css,
-  global,
-  darkTheme,
-  getCssString,
-  Context,
-  CSSType
-};
