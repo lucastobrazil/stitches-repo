@@ -14,7 +14,7 @@ export const config =
         default: "-apple-system, BlinkMacSystemFont, sans-serif, serif",
       },
       colors: {
-        primary: createRgbaString(ThemeColors.accent.data.value),
+        primary: createRgbaString(ThemeColors.primary.data.value),
         accent: createRgbaString(ThemeColors.accent.data.value),
         background: "rgba(244,244,244)",
         text: "rgba(0,0,0,0.87)",

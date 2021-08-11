@@ -4,6 +4,8 @@
 2. For versioning of packages, using [Lerna](https://github.com/lerna/lerna)
 3. Typescript support
 
+# Usage
+From the root directory, run `npm install && npm run develop` and you're good to go 👍.
 
 # Packages
 
@@ -11,10 +13,6 @@
 - Basic Typescript package
 - Also uses [Stitches](https://stitches.dev/) for styling
 - Exposes demo component `<Button>` that uses stitches
-
-
-### To use:
-- `cd packages/core && npm run build`
 
 ## @maki-ds/icons
 - Sample library that consumes `@maki-ds/core` 
@@ -26,9 +24,6 @@
 - Consumes/dogfoods the `@maki-ds/core` lib
 - HMR works when you rebuild the lib
 - Deployed via CI to http://design.dev.geniesolutions.cloud/
-
-## To use:
-- `cd docs && npm run develop`
 
 ## References
 - https://medium.com/@NiGhTTraX/how-to-set-up-a-typescript-monorepo-with-lerna-c6acda7d4559

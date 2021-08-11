@@ -1,6 +1,8 @@
 {
     "name": "@maki-ds/core",
     "version": "0.0.26",
+    "description": "The best of the best.",
+    "repository": "https://gitlab.geniesolutions.com.au/lucasarundell/maki-ds",
     "main": "dist/index",
     "types": "dist/index",
     "files": [
@@ -8,9 +10,9 @@
     ],
     "scripts": {
         "build": "npm run clean && npm run compile",
-        "develop": "tsc -p tsconfig.build.json --watch",
+        "develop": "npx webpack --mode=development --watch",
         "clean": "rimraf -rf ./dist",
-        "compile": "tsc -p tsconfig.build.json",
+        "compile": "npx webpack",
         "prepublishOnly": "npm run build",
         "test": "echo 📣 core"
     },
@@ -18,6 +20,13 @@
         "@genie-solutions/motif-tokens": "^2.1.1",
         "@radix-ui/react-context-menu": "^0.0.24",
         "@stitches/react": "^0.2.4",
-        "react": "^17.0.2"
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+        "clean-webpack-plugin": "^4.0.0-alpha.0",
+        "ts-loader": "8.3.0",
+        "webpack": "^4.9.2",
+        "webpack-cli": "^4.7.2"
     }
 }
