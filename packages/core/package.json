@@ -19,7 +19,8 @@
     "dependencies": {
         "@genie-solutions/motif-tokens": "^2.1.1",
         "@radix-ui/react-context-menu": "^0.0.24",
-        "@stitches/react": "^0.2.4"
+        "@stitches/react": "^0.2.4",
+        "@types/react": "^17.0.17"
     },
     "peerDependencies": {
         "react": "^16.8.2",

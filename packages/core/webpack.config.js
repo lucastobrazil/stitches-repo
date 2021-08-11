@@ -1,19 +1,22 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const path = require("path");
-const pkg = require('./package.json');
-const escapeRegExp = require('lodash.escaperegexp');
+const pkg = require("./package.json");
+const escapeRegExp = require("lodash.escaperegexp");
 
-const externals = Object.keys(pkg.dependencies);
+const externals = Object.keys({ ...pkg.dependencies, ...pkg.peerDependencies });
 
 module.exports = (env, argv) => ({
   mode: argv.mode === "production" ? "production" : "development",
   devtool: "inline-source-map",
 
   entry: {
-    index: "./src/index.ts", 
+    index: "./src/index.ts",
   },
-  externals: new RegExp(`^(${externals.map(name => escapeRegExp(name)).join('|')})\\b`, 'i'),
+  externals: new RegExp(
+    `^(${externals.map((name) => escapeRegExp(name)).join("|")})\\b`,
+    "i"
+  ),
   module: {
     rules: [
       // Converts TypeScript code to JavaScript
